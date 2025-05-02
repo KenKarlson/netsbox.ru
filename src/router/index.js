@@ -14,7 +14,7 @@ export default new Router({
     },
     {
       path: '/html',
-      name: 'HtmlView', //название дич, надо подправить
+      name: 'HtmlView', //ok
       component: () => import('@/views/HtmlView.vue'),
     },
     {
