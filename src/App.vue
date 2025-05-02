@@ -1,13 +1,28 @@
 <template>
-  <div id="app"></div>
+  <div id="app">
+    <nav>
+      <router-link to="/html">HTML</router-link> |
+      <router-link to="/js">JavaScript</router-link> |
+      <router-link to="/vue2">Vue 2</router-link> |
+      <router-link to="/vue3">Vue 3</router-link> |
+      <router-link to="/about">О курсе</router-link>
+    </nav>
+
+    <router-view />
+  </div>
 </template>
 
 <script>
 export default {
-  name: "App",
-  components: {},
+  name: 'App',
 };
 </script>
 
-<style>
+<style lang="scss">
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: #2c3e50;
+  margin: 20px;
+}
 </style>
