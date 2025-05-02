@@ -3,7 +3,7 @@
     <h1>📘 Изучение HTML</h1>
     <p>Курс рассчитан на 90 дней. Здесь собраны темы, объяснения и примеры.</p>
 
-    <PlanTableComponent :planData="planData" lang="html" lang-name="HTML" />
+    <PlanTableComponent :planData="planData" lang="html" langName="HTML" />
   </div>
 </template>
 
@@ -18,21 +18,17 @@ export default {
       planData: [],
     };
   },
+
   async mounted() {
     try {
-      const response = await fetch(require('@/data/learning-plans/html.json'));
+      const response = await fetch('/learning-plans/html.json');
+      if (!response.ok) throw new Error('Файл не найден');
+
       const data = await response.json();
       this.planData = data;
     } catch (err) {
-      console.error('Ошибка загрузки плана:', err);
+      console.error('Не удалось загрузить план:', err);
     }
   },
 };
 </script>
-
-<style scoped>
-.html-view {
-  max-width: 1000px;
-  margin: auto;
-}
-</style>

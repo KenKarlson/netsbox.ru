@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <nav>
+      <router-link to="/">Home</router-link> |
       <router-link to="/html">HTML</router-link> |
+      <router-link to="/css">CSS</router-link> |
       <router-link to="/js">JavaScript</router-link> |
       <router-link to="/vue2">Vue 2</router-link> |
       <router-link to="/vue3">Vue 3</router-link> |

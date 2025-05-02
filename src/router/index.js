@@ -17,6 +17,16 @@ export default new Router({
       name: 'HtmlView', //название дич, надо подправить
       component: () => import('@/views/HtmlView.vue'),
     },
+    {
+      path: '/css',
+      name: 'CSS', //ok
+      component: () => import('@/views/CSSView.vue'),
+    },
+    {
+      path: '/about',
+      name: 'About', //ok
+      component: () => import('@/views/AboutView.vue'),
+    },
     // тута все что надо будет потом
   ],
 });
